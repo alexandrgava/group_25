@@ -1,20 +1,55 @@
-1)      Посмотреть где я         pwd
-2)      Создать папку           	mkdir <folder name>
-3)      Зайти в папку              	cd  <Folder name>
-4)      Создать три папки   	mkdir {Folder1,Folder2,Folder3} или    mkdir Folder1 Folder2 Folder3
-5)      Зайти в любую папку      	cd. Folder name
-6)      Создать 5 файлов (3txt, 2 json)	touch {file1.txt,file2.txt,file3.txt,file4,json,file5.json}   или     touch file1.txt file2.txt file3.txt file4.json file5.json
-7)      Вывести список содержимого папки	ls -la
-8)      Открыть любой txt файл	vim <name file>
-9)      + написать туда любой текст	i(insert)  ввод текста 
-10)   Сохранить и выйти	ESC :wq
-11)   Выйти из папки на уровень выше	cd ..
-12)   Переместить любые два файла, которые вы создали в любую другую папку	mv   <file_1,file_2> ~/<Folder name>
-13)   Скопировать любые два файла, которые вы создали в любую другую папку	cp <file_1,file_2> ~/<Folder name>
-14)   Найти файл по имени	find
-15)   Посмотреть содержимое в реальном времени       grep
-16)   Вывести несколько последних строк из текстового файла	head -2 file name  
-17)   Вывести несколько первых строк из текстового файла	tail -2 file name (2 строки)
-18)   Посмотреть содержимое длинного файла     	less file name
-19)   Вывести дату и время:	date
+pwd                          Посмотреть где я         
+mkdir <folder name>          Создать папку           	
+cd  <Folder name>            Зайти в папку  
+cd ..                         Выйти из папки на уровень выше	
+cd ./././                     Выйти из папки на несколько уровеней  выше	
+mkdir {Folder1,Folder2,Folder3}      Создать три папки   	 или    mkdir Folder1 Folder2 Folder3
+   	
+touch {file1.txt,file2.txt,file3.txt,file4,json,file5.json}      Создать 5 файлов (3txt, 2 json)	   или     touch file1.txt file2.txt file3.txt file4.json file5.json
+
+vim <name file>               Открыть любой txt файл	
+                             + написать туда любой текст	i(insert)  ввод текста 
+                             Сохранить и выйти	ESC :wq
+КОМАНДЫ 
+find                           Найти файл по имени	
+grep                           Посмотреть содержимое в реальном времени       
+head -2 file name              Вывести несколько последних строк из текстового файла	  
+tail -2 file name (2 строки)   Вывести несколько первых строк из текстового файла	
+less file name                 Посмотреть содержимое длинного файла     	
+date                           Вывести дату и время:	
+20)  
+CAT
+cat > name_file_1            создаем файл открывается в Гите. выход из файла через Cntr +C ( В новой строке)
+cat > name_file_1            повторное открытие файла  и ввод данных перезапишет содержание файла.
+cat >> name_file_1           открываем файл и добавляем данные
+cat name_file                открыть файл
+ПРОСМОТР СОДЕРЖИМОГО
+ls -la                       открывает содержимое папки , в которой мы находимся
+ls  Folder_name            откроет содержимое папки Folder_name
+ls -la Folder_name         откроет содержимое папки Folder_name  в  развернутом виде
+УДАЛЕНИЕ
+git clean -f -d               Удалить из репозитория все неотслеживаемые файлы и папки                    
+rm name_file(name_Folder)    удалить файл\папку не отслеживаемую
+ПЕРЕМЕЩЕНИЕ
+mv name_file Folder/          переместить файл в папку
+mv file1 file2                преименовать файл file1  в  file2
+
+BRANCH
+git branch                      показать список веток
+git branch -v                   показать список веток и последний коммит в каждой
+git branch new_branch           создать новую ветку с указанным именем
+git checkout new_branch         перейти в указанную ветку
+git checkout -b new_branch      создать новую ветку с указанным именем и перейти в неё
+git merge name_1               влить в ветку, в которой находимся, данные из ветки name_1
+git branch -d name_1           удалить ветку name_1 (если её изменения уже влиты в главную ветку)
+git branch --merged            показать ветки, уже слитые с активной (их можно удалять)
+git branch --no-merged         показать ветки, не слитые с активной
+git branch -a                  показать все имеющиеся ветки (в т.ч. на удаленных репозиториях)
+git branch -m name_1 new_branch_name_2                             переименовать локально ветку name_1 в new_branch_name_2
+git branch -m new_branch_name                                      переименовать локально ТЕКУЩУЮ ветку в new_branch_name
+git push origin :old_branch_name new_branch_name                   применить переименование в удаленном репозитории
+git branch --unset-upstream                                        завершить процесс переименования
+
+
+
 
