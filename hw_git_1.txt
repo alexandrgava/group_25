@@ -2,7 +2,7 @@ pwd                          Посмотреть где я
 mkdir <folder name>          Создать папку           	
 cd  <Folder name>            Зайти в папку  
 cd ..                         Выйти из папки на уровень выше	
-cd ./././                     Выйти из папки на несколько уровеней  выше	
+cd ../../../                     Выйти из папки на несколько уровеней  выше	
 mkdir {Folder1,Folder2,Folder3}      Создать три папки   	 или    mkdir Folder1 Folder2 Folder3
    	
 touch {file1.txt,file2.txt,file3.txt,file4,json,file5.json}      Создать 5 файлов (3txt, 2 json)	   или     touch file1.txt file2.txt file3.txt file4.json file5.json
